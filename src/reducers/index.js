@@ -1,3 +1,5 @@
+import { ADD_ITEM } from "../App"
+
 const initialState = {  
         additionalPrice: 0,
         car: {
@@ -16,15 +18,20 @@ const initialState = {
 }
 
 export const testReducer = (state = initialState, action) => {
-    // switch (action.type) {
-    //     case "CAR_NAME":
-    //         return {
-    //             ...state,
-    //         }
-    // }
-    return (
-        
-        state
-        // console.log("index", state.car)
-    )
-}
+    switch (action.type) {
+        case ADD_ITEM:
+            return {
+                ...state,
+                car: {
+                    ...state.car, 
+                    features: [ ...state.car.features,
+                        {
+                        name: action.payload.name
+                        }
+                    ]},
+            }
+        default: 
+            return state
+
+    }
+  }

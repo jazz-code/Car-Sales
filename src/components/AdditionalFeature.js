@@ -14,8 +14,8 @@ const AdditionalFeature = props => {
 const mapStateToProps = state => {
   console.log("additionalFeature", state)
   return {
-    featureName: state.feature.name,
-    featurePrice: state.feature.price
+    featureName: state.car.name,
+    featurePrice: state.car.price,
   }
 }
 export default connect(mapStateToProps, {})(AdditionalFeature)

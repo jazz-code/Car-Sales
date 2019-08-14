@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
-
+export const ADD_ITEM = 'ADD_ITEM'
 const App = () => {
   // const [state setState] = useState(initialState)
   // const state = {
@@ -28,9 +28,10 @@ const App = () => {
     // dispatch an action here to remove an item
   };
 
-  const buyItem = item => {
-    // dipsatch an action here to add an item
-  };
+  // const buyItem = item => {
+  //   let index = car.features.findIndex(el => el.name === item.name)
+  //   index === -1 && dispatch({ type: ADD_ITEM, payload: item })
+  // };
 
   return (
     <div className="boxes">

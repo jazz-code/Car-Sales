@@ -10,7 +10,9 @@ import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-export const store= createStore(testReducer) 
+export const store=createStore(testReducer) 
+
+console.log("store", store)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

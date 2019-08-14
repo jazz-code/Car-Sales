@@ -22,4 +22,9 @@ export const testReducer = (state = initialState, action) => {
     //             ...state,
     //         }
     // }
+    return (
+        
+        state
+        // console.log("index", state.car)
+    )
 }

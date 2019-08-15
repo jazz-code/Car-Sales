@@ -18,20 +18,24 @@ const initialState = {
 }
 
 export const testReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case ADD_ITEM:
-            return {
+    switch(action.type) {
+        case 'ADD_FEATURE':
+            if(state.car.features.includes(action.payload)) {
+                return {
+                    ...state
+                };
+            } else {
+                return {
                 ...state,
                 car: {
-                    ...state.car, 
-                    features: [ ...state.car.features,
-                        {
-                        name: action.payload.name
-                        }
-                    ]},
-            }
-        default: 
-            return state
-
+                    ...state.car,
+                    features: [...state.car.features, action.payload] 
+                },
+                additionalPrice: state.additionalPrice + action.payload.price,
+            };
+        }
+    
+        default:
+            return state;
     }
-  }
+}

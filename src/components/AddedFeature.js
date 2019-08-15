@@ -16,12 +16,5 @@ import { connect } from "react-redux";
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    featureName: state.feature.name,
-    featurePrice: state.feature.price
-  }
-}
 
-// export default AddedFeature;
-export default connect(mapStateToProps, {})(AddedFeature)
+export default AddedFeature;

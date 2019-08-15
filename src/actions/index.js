@@ -1,6 +1,6 @@
-export const addItem = item => {
+export const addFeature = feature => {
  return { 
-     type: "ADD_ITEM",
-     payload: item
+     type: "ADD_FEATURE",
+     payload: feature
     }
 }
